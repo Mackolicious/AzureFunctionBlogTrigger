@@ -25,10 +25,11 @@ namespace Mackolicious.Web.Serverless
             var clientSecret = GetEnvironmentVariable("clientSecret");
             var tenantId = GetEnvironmentVariable("tenantId");
             var webAppName = GetEnvironmentVariable("webAppName");
+            var webAppResourceGroupName = GetEnvironmentVariable("webAppResourceGroupName");
 
             var credentials = _azureManagementAbstraction.GetCredentials(clientId, clientSecret, tenantId);
 
-            var webApp = await _azureManagementAbstraction.GetWebApp(credentials, "mackolicious-resource-group", webAppName);
+            var webApp = await _azureManagementAbstraction.GetWebApp(credentials, webAppResourceGroupName, webAppName);
 
             if (webApp == null)
             {
