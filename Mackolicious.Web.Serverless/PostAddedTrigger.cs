@@ -15,7 +15,7 @@ namespace Mackolicious.Web.Serverless
             _azureManagementAbstraction = azureManagementAbstraction;
         }
 
-        //Triggered after new blob is added or modified
+        //Triggered after new blob is added or modified as a result of adding a new blog post
         [FunctionName("PostAddedTrigger")]
         public async Task Run([BlobTrigger("posts/{name}", Connection = "blob_STORAGE")]Stream myBlob, string name, ILogger log)
         {
