@@ -1,5 +1,5 @@
 {
-    "azureFunctions.deploySubpath": "PostAddedTrigger/bin/Release/netcoreapp2.1/publish",
+    "azureFunctions.deploySubpath": "Mackolicious.Web.Serverless/bin/Release/netcoreapp2.1/publish",
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~2",
     "debug.internalConsoleOptions": "neverOpen",
